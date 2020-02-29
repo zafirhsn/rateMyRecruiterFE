@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import '../styles/Home.css'
+// import 
 
 class Home extends Component {
   state = {
@@ -21,16 +22,19 @@ class Home extends Component {
     console.log(this.state.rateaRecruiter);
   }
   render(){
+
+
+
     return(
       <div className="home"> 
-        <div className="container">
+        <div className="container-fluid">
 
           {/* Search bar row */}
-          <div className="row">
-              <form className="col">
+          <div className="row search-row">
+              <form className="col offset-s4">
                 <div className="row">
                   <div className="input-field col">
-                    <input placeholder="Search" name="searchbar" type="text" id="search_bar"></input>
+                    <input placeholder="Find a Recruiter" name="searchbar" type="text" id="search_bar"></input>
             
                   </div>
                 </div>
@@ -38,22 +42,23 @@ class Home extends Component {
           </div>
 
           {/* Button component row */}
-          <div className="row">
-            <div className="col">
+          <div className="row button-row">
+
+            <div className="col offset-l3">
               <Link
                 className="waves-effect waves-light btn-large search-button"
                 onClick={this.searchByrecruiterEvent.bind(this)}
                 to="/searchByRecruiter">
                   Search by Recruiter</Link>
             </div>
-            <div className="col">
+            <div className="col ">
               <Link
                 className="waves-effect waves-light btn-large search-button"
                 onClick={this.searchByCompanyEvent.bind(this)}
                 to="/searchByCompany">
                   Search by Company</Link>
             </div>
-            <div className="col">
+            <div className="col ">
               <Link
                 className="waves-effect waves-light btn-large search-button"
                 onClick={this.rateaRecruiterEvent.bind(this)}
