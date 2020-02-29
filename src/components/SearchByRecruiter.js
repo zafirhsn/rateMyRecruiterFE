@@ -1,15 +1,16 @@
 import React, {Component} from 'react';
+
 // make your own css on Styles Folder file and import here. Remove the this comment
 // import './App.css';
-class Home extends Component{
+class SearchByRecruiter extends Component{
   render(){
       
       return(
           <div>
-              <h1>Home</h1>
+              <h1>Search By Recruiter</h1>
           </div>
       );
   }
 }
-export default (Home);
+export default (SearchByRecruiter);
 
