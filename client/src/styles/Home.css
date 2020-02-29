@@ -2,3 +2,15 @@
     font: 300px;
     /* background-color: black; */
 }
+
+.search-button {
+    background-color: #0D9AFF
+}
+
+.search-button:hover {
+    background-color: #0A74BF
+}
+
+.search-button:focus {
+    background-color: #0D9AFF;
+}
