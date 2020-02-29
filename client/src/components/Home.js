@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import '../styles/Home.css'
-
 
 class Home extends Component {
   state = {
@@ -9,15 +9,15 @@ class Home extends Component {
     rateaRecruiter: false
   }
   searchByrecruiterEvent(e) {
-    this.state.clickedSearchbyRecruiter = !this.state.clickedSearchbyRecruiter;
+    this.setState({clickedSearchbyRecruiter: !this.state.clickedSearchbyRecruiter})
     console.log(this.state.clickedSearchbyRecruiter);
   }
   searchByCompanyEvent(e) {
-    this.state.clickedSearchbyCompany = !this.state.clickedSearchbyCompany;
+    this.setState({clickedSearchbyCompany: !this.state.clickedSearchbyCompany});
     console.log(this.state.clickedSearchbyCompany);
   }
   rateaRecruiterEvent(e) {
-    this.state.rateaRecruiter = !this.state.rateaRecruiter;
+    this.setState({ rateaRecruiter: !this.state.rateaRecruiter })
     console.log(this.state.rateaRecruiter);
   }
   render(){
@@ -40,13 +40,25 @@ class Home extends Component {
           {/* Button component row */}
           <div className="row">
             <div className="col">
-            <a className="waves-effect waves-light btn-large search-button" onClick={this.searchByrecruiterEvent.bind(this)}>Search by Recruiter</a>
+              <Link
+                className="waves-effect waves-light btn-large search-button"
+                onClick={this.searchByrecruiterEvent.bind(this)}
+                to="/">
+                  Search by Recruiter</Link>
             </div>
             <div className="col">
-            <a className="waves-effect waves-light btn-large search-button" onClick={this.searchByCompanyEvent.bind(this)}>Search by Company</a>
+              <Link
+                className="waves-effect waves-light btn-large search-button"
+                onClick={this.searchByCompanyEvent.bind(this)}
+                to="/">
+                  Search by Company</Link>
             </div>
             <div className="col">
-            <a className="waves-effect waves-light btn-large search-button" onClick={this.rateaRecruiterEvent.bind(this)}>Rate a Recruiter</a>
+              <Link
+                className="waves-effect waves-light btn-large search-button"
+                onClick={this.rateaRecruiterEvent.bind(this)}
+                to="/">
+                  Rate a Recruiter</Link>
             </div>
           </div>
 
