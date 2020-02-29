@@ -43,21 +43,21 @@ class Home extends Component {
               <Link
                 className="waves-effect waves-light btn-large search-button"
                 onClick={this.searchByrecruiterEvent.bind(this)}
-                to="/">
+                to="/searchByRecruiter">
                   Search by Recruiter</Link>
             </div>
             <div className="col">
               <Link
                 className="waves-effect waves-light btn-large search-button"
                 onClick={this.searchByCompanyEvent.bind(this)}
-                to="/">
+                to="/searchByCompany">
                   Search by Company</Link>
             </div>
             <div className="col">
               <Link
                 className="waves-effect waves-light btn-large search-button"
                 onClick={this.rateaRecruiterEvent.bind(this)}
-                to="/">
+                to="/rateARecruiter">
                   Rate a Recruiter</Link>
             </div>
           </div>
